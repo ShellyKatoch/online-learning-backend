@@ -6,6 +6,9 @@ const courseSchema = new mongoose.Schema({
     instructor: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
     price: { type: Number, required: true, default: 0 },
     category: { type: String, default: 'General' },
+    level: { type: String, default: 'Beginner' },
+    duration: { type: String, default: '' },
+    image: { type: String, default: '' },
     published: { type: Boolean, default: false },
     lessons: [{ title: String, content: String, duration: String }],
 }, {
